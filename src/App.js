@@ -103,7 +103,7 @@ export class App extends Component {
   }
 }
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = state => {
   return {
     hue: state.hue,
     saturation: state.saturation,
