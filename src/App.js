@@ -7,7 +7,7 @@ import { updateHue } from './actions/hue-actions'
 import { updateSaturation } from './actions/saturation-actions'
 import { updateLightness } from './actions/lightness-actions'
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props)
 
