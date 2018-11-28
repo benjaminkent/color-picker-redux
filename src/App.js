@@ -41,9 +41,9 @@ export class App extends Component {
               <p
                 className="hslValue"
                 style={{
-                  color: `hsl(${this.props.hue}, ${this.props.saturation}%, ${
-                    this.props.lightness
-                  }%)`
+                  color: `hsl(${this.props.hue}, 
+                    ${this.props.saturation}%, 
+                    ${this.props.lightness}%)`
                 }}
               >
                 H:
