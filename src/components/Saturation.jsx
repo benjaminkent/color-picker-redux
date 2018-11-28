@@ -4,13 +4,7 @@ import { updateSaturation } from '../actions/saturation-actions'
 import { connect } from 'react-redux'
 
 class Saturation extends Component {
-  constructor(props) {
-    super(props)
-
-    this.onUpdateSaturation = this.onUpdateSaturation.bind(this)
-  }
-
-  onUpdateSaturation(event) {
+  onUpdateSaturation = event => {
     this.props.onUpdateSaturation(event.target.value)
   }
 
