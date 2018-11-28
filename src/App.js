@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import './App.css'
 
 import { connect } from 'react-redux'
+
+import Hue from './components/Hue'
+import Saturation from './components/Saturation'
 
 import { updateHue } from './actions/hue-actions'
 import { updateSaturation } from './actions/saturation-actions'
@@ -11,13 +13,8 @@ export class App extends Component {
   constructor(props) {
     super(props)
 
-    this.onUpdateHue = this.onUpdateHue.bind(this)
     this.onUpdateSaturation = this.onUpdateSaturation.bind(this)
     this.onUpdateLightness = this.onUpdateLightness.bind(this)
-  }
-
-  onUpdateHue(event) {
-    this.props.onUpdateHue(event.target.value)
   }
 
   onUpdateSaturation(event) {
@@ -65,26 +62,8 @@ export class App extends Component {
 
           <div>
             <ul>
-              <li>
-                <p>Hue</p>
-                <input
-                  onChange={this.onUpdateHue}
-                  type="range"
-                  min="0"
-                  max="360"
-                  value={this.props.hue}
-                />
-              </li>
-              <li>
-                <p>Saturation</p>
-                <input
-                  onChange={this.onUpdateSaturation}
-                  type="range"
-                  min="0"
-                  max="100"
-                  value={this.props.saturation}
-                />
-              </li>
+              <Hue />
+              <Saturation />
               <li>
                 <p>Lightness</p>
                 <input
