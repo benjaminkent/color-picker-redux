@@ -104,7 +104,6 @@ export class App extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(state)
   return {
     hue: state.hue,
     saturation: state.saturation,
