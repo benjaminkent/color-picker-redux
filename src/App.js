@@ -56,9 +56,9 @@ export class App extends Component {
             <div
               className="color-window"
               style={{
-                backgroundColor: `hsl(${this.props.hue}, ${
-                  this.props.saturation
-                }%, ${this.props.lightness}%)`
+                backgroundColor: `hsl(${this.props.hue}, 
+                  ${this.props.saturation}%,
+                  ${this.props.lightness}%)`
               }}
             />
           </aside>
