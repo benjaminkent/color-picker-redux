@@ -22,9 +22,9 @@ const allReducers = combineReducers({
 const store = createStore(
   allReducers,
   {
-    hue: 188,
+    hue: 102,
     saturation: 100,
-    lightness: 75,
+    lightness: 58,
     alpha: 94
   },
   window.devToolsExtension && window.devToolsExtension()
