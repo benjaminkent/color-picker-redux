@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 
+import { updateAlpha } from '../actions/alpha-actions'
+import { connect } from 'react-redux'
+
 class Alpha extends Component {
+  onUpdateAlpha = event => {
+    this.props.onUpdateAlpha(event.target.value)
+  }
+
   render() {
     return (
       <li>
@@ -17,4 +24,17 @@ class Alpha extends Component {
   }
 }
 
-export default Alpha
+const mapStateToProps = state => {
+  return {
+    alpha: state.alpha
+  }
+}
+
+const mapActionsToProps = {
+  onUpdateAlpha: updateAlpha
+}
+
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(Alpha)

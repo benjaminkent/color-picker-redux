@@ -7,10 +7,6 @@ import Saturation from './components/Saturation'
 import Lightness from './components/Lightness'
 import Alpha from './components/Alpha'
 
-import { updateHue } from './actions/hue-actions'
-import { updateSaturation } from './actions/saturation-actions'
-import { updateLightness } from './actions/lightness-actions'
-
 export class App extends Component {
   render() {
     return (
@@ -25,9 +21,9 @@ export class App extends Component {
               <p
                 className="hslValue"
                 style={{
-                  color: `hsl(${this.props.hue}, 
+                  color: `hsla(${this.props.hue}, 
                     ${this.props.saturation}%, 
-                    ${this.props.lightness}%)`
+                    ${this.props.lightness}%, ${this.props.alpha}%)`
                 }}
               >
                 H:
@@ -40,19 +36,20 @@ export class App extends Component {
             <div
               className="color-window"
               style={{
-                backgroundColor: `hsl(${this.props.hue}, 
+                backgroundColor: `hsla(${this.props.hue}, 
                   ${this.props.saturation}%,
-                  ${this.props.lightness}%)`
+                  ${this.props.lightness}%, ${this.props.alpha}%)`
               }}
             />
             <p
               style={{
-                color: `hsl(${this.props.hue}, 
+                color: `hsla(${this.props.hue}, 
                   ${this.props.saturation}%, 
-                  ${this.props.lightness}%)`
+                  ${this.props.lightness}%,
+                  ${this.props.alpha}%)`
               }}
             >
-              Alpha: %
+              Alpha: {this.props.alpha}%
             </p>
           </aside>
 
@@ -74,17 +71,9 @@ const mapStateToProps = state => {
   return {
     hue: state.hue,
     saturation: state.saturation,
-    lightness: state.lightness
+    lightness: state.lightness,
+    alpha: state.alpha
   }
 }
 
-const mapActionsToProps = {
-  onUpdateHue: updateHue,
-  onUpdateSaturation: updateSaturation,
-  onUpdateLightness: updateLightness
-}
-
-export default connect(
-  mapStateToProps,
-  mapActionsToProps
-)(App)
+export default connect(mapStateToProps)(App)
