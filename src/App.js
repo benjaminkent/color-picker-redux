@@ -7,7 +7,7 @@ import Saturation from './components/Saturation'
 import Lightness from './components/Lightness'
 import Alpha from './components/Alpha'
 
-export class App extends Component {
+class App extends Component {
   render() {
     return (
       <div>

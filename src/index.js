@@ -22,7 +22,7 @@ const allReducers = combineReducers({
 const store = createStore(
   allReducers,
   {
-    hue: 139,
+    hue: 188,
     saturation: 100,
     lightness: 75,
     alpha: 94
