@@ -10,11 +10,13 @@ import { Provider } from 'react-redux'
 import hueReducer from './reducers/hue-reducer'
 import saturationReducer from './reducers/saturation-reducer'
 import lightnessReducer from './reducers/lightness-reducer'
+import alphaReducer from './reducers/alpha-reducer'
 
 const allReducers = combineReducers({
   hue: hueReducer,
   saturation: saturationReducer,
-  lightness: lightnessReducer
+  lightness: lightnessReducer,
+  alpha: alphaReducer
 })
 
 const store = createStore(
@@ -22,7 +24,8 @@ const store = createStore(
   {
     hue: 150,
     saturation: 68,
-    lightness: 48
+    lightness: 48,
+    alpha: 95
   },
   window.devToolsExtension && window.devToolsExtension()
 )

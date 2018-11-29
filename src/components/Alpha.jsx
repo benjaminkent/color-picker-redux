@@ -6,11 +6,11 @@ class Alpha extends Component {
       <li>
         <p>Alpha</p>
         <input
-          onChange={this.onUpdateHue}
+          onChange={this.onUpdateAlpha}
           type="range"
           min="0"
           max="100"
-          value={this.props.hue}
+          value={this.props.alpha}
         />
       </li>
     )

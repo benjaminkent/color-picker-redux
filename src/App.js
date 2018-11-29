@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Hue from './components/Hue'
 import Saturation from './components/Saturation'
 import Lightness from './components/Lightness'
+import Alpha from './components/Alpha'
 
 import { updateHue } from './actions/hue-actions'
 import { updateSaturation } from './actions/saturation-actions'
@@ -44,6 +45,15 @@ export class App extends Component {
                   ${this.props.lightness}%)`
               }}
             />
+            <p
+              style={{
+                color: `hsl(${this.props.hue}, 
+                  ${this.props.saturation}%, 
+                  ${this.props.lightness}%)`
+              }}
+            >
+              Alpha: %
+            </p>
           </aside>
 
           <div>
@@ -51,6 +61,7 @@ export class App extends Component {
               <Hue />
               <Saturation />
               <Lightness />
+              <Alpha />
             </ul>
           </div>
         </main>
