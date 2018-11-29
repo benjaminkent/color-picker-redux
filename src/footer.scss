@@ -1,0 +1,20 @@
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 3rem 1rem;
+  background-color: $header;
+  color: $header-letters;
+}
+
+.fas {
+  color: #ed4040;
+}
+
+.footer p {
+  margin: 0 0 3px 0;
+}
+
+.footer a {
+  color: $header-letters;
+  text-decoration: none;
+}

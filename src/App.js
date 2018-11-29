@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
 
+import Footer from './components/Footer'
+
 import Hue from './components/Hue'
 import Saturation from './components/Saturation'
 import Lightness from './components/Lightness'
@@ -10,7 +12,7 @@ import Alpha from './components/Alpha'
 class App extends Component {
   render() {
     return (
-      <div>
+      <>
         <header className="header">
           <h1>Color Picker!</h1>
         </header>
@@ -64,7 +66,8 @@ class App extends Component {
             </ul>
           </div>
         </main>
-      </div>
+        <Footer />
+      </>
     )
   }
 }

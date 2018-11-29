@@ -1,7 +1,9 @@
 $awesome-aqua: #24ffce;
 $body-background: #7f5a83;
 $header: #0d324d;
+$header-letters: #b59875;
 
+@import 'footer';
 @import url('https://fonts.googleapis.com/css?family=Chicle');
 
 body {
@@ -17,7 +19,7 @@ main {
   justify-content: space-around;
   width: 600px;
   border: 1px solid #404e4d;
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 20rem auto;
   background-color: #b59875;
   border-radius: 10px;
 }
@@ -154,6 +156,7 @@ input[type='range']::-moz-range-track {
   main {
     width: 20rem;
     display: block;
+    margin-bottom: 5rem;
   }
 
   input[type='range'] {
