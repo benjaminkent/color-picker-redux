@@ -23,7 +23,8 @@ export class App extends Component {
                 style={{
                   color: `hsla(${this.props.hue}, 
                     ${this.props.saturation}%, 
-                    ${this.props.lightness}%, ${this.props.alpha}%)`
+                    ${this.props.lightness}%, 
+                    ${this.props.alpha}%)`
                 }}
               >
                 H:
@@ -38,7 +39,8 @@ export class App extends Component {
               style={{
                 backgroundColor: `hsla(${this.props.hue}, 
                   ${this.props.saturation}%,
-                  ${this.props.lightness}%, ${this.props.alpha}%)`
+                  ${this.props.lightness}%, 
+                  ${this.props.alpha}%)`
               }}
             />
             <p
