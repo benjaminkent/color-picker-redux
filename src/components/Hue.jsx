@@ -11,7 +11,7 @@ class Hue extends Component {
   render() {
     return (
       <li>
-        <p>Hue</p>
+        <p className="hsl">Hue</p>
         <input
           onChange={this.onUpdateHue}
           type="range"

@@ -1,10 +1,14 @@
+$awesome-aqua: #24ffce;
+$body-background: #7f5a83;
+$header: #0d324d;
+
 @import url('https://fonts.googleapis.com/css?family=Chicle');
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Chicle', cursive;
-  background-color: #7f5a83;
+  background-color: $body-background;
   letter-spacing: 3px;
 }
 
@@ -20,9 +24,9 @@ main {
 
 h1 {
   text-align: center;
-  margin-top: 50px;
   color: #b59875;
   font-size: 4rem;
+  margin: 0;
 }
 
 ul {
@@ -42,14 +46,88 @@ p {
   padding-left: 10px;
 }
 
-input {
+input[type='range'] {
+  width: 20rem;
+  -webkit-appearance: none;
+  background: transparent;
+  margin-bottom: 1rem;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid $awesome-aqua;
+  height: 1.5rem;
+  width: 0.8rem;
+  margin-top: -3.5%;
+  border-radius: 3px;
+  background-color: $awesome-aqua;
+  cursor: pointer;
+  box-shadow: 0px 0.5px 5px $body-background;
+}
+
+input[type='range']::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: 1px solid $awesome-aqua;
+  height: 1.5rem;
+  width: 0.8rem;
+  border-radius: 3px;
+  background-color: $awesome-aqua;
+  cursor: pointer;
+  box-shadow: 0px 0.5px 5px $body-background;
+}
+
+input[type='range']::-ms-thumb {
+  -webkit-appearance: none;
+  border: 1px solid $awesome-aqua;
+  height: 1.5rem;
+  width: 0.8rem;
+  border-radius: 3px;
+  background-color: $awesome-aqua;
+  cursor: pointer;
+  box-shadow: 0px 0.5px 5px $body-background;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']::-ms-track {
   width: 300px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  border: 0.3px solid $body-background;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 300px;
+  cursor: pointer;
+  background: $header;
+  border-color: transparent;
+  color: transparent;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  border: 1px solid $body-background;
+}
+
+input[type='range']::-moz-range-track {
+  width: 300px;
+  height: 0.2rem;
+  cursor: pointer;
+  border: 0.3px solid $body-background;
+  background: $header;
+  border-color: transparent;
+  color: transparent;
+  border-radius: 0.2rem;
 }
 
 .header {
-  background-color: #0d324d;
+  background-color: $header;
   margin: 0;
-  padding: 1px;
+  padding: 2rem 0;
 }
 
 .hslValue {
@@ -62,21 +140,28 @@ input {
 }
 
 .color-window {
-  border: 10px solid #0d324d;
+  border: 10px solid $header;
   height: 125px;
   width: 125px;
   margin: 0 auto;
 }
 
+.hsl {
+  margin: 0;
+}
+
 @media (max-width: 700px) {
   main {
-    width: 400px;
+    width: 20rem;
     display: block;
   }
 
-  input {
-    height: 50px;
-    width: 350px;
+  input[type='range'] {
+    width: 15rem;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    margin-top: -4.2%;
   }
 
   aside {
@@ -108,10 +193,6 @@ input {
   p {
     text-align: center;
     margin: 0;
-  }
-
-  h1 {
-    margin-top: 0;
   }
 
   .values {

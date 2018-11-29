@@ -11,7 +11,7 @@ class Lightness extends Component {
   render() {
     return (
       <li>
-        <p>Lightness</p>
+        <p className="hsl">Lightness</p>
         <input
           onChange={this.onUpdateLightness}
           type="range"

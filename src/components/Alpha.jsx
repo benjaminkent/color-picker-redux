@@ -11,7 +11,7 @@ class Alpha extends Component {
   render() {
     return (
       <li>
-        <p>Alpha</p>
+        <p className="hsl">Alpha</p>
         <input
           onChange={this.onUpdateAlpha}
           type="range"

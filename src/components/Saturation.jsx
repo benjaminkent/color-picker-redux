@@ -11,7 +11,7 @@ class Saturation extends Component {
   render() {
     return (
       <li>
-        <p>Saturation</p>
+        <p className="hsl">Saturation</p>
         <input
           onChange={this.onUpdateSaturation}
           type="range"
